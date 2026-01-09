@@ -14,7 +14,6 @@ public class Materials {
     public static Material ArgonClathrate;
 
     //Other minerals
-    public static Material Kaolinite;
     public static Material Clay;
 
     public static void register() {
@@ -23,7 +22,6 @@ public class Materials {
         Unobtanium = new Material.Builder(
                 Main.id("unobtanium"))
                 .ingot()
-                .ore()
                 .element(Elements.Unobtanium)
                 .color(0xb439b4)
                 .buildAndRegister();
@@ -48,15 +46,6 @@ public class Materials {
                 .buildAndRegister();
 
         //Other minerals
-        Kaolinite = new Material.Builder(
-                Main.id("kaolinite"))
-                .dust()
-                .ore()
-                .formula("Al2Si2O5(OH)4")
-                .components(GTMaterials.Aluminium, 2, GTMaterials.Silicon, 2, GTMaterials.Oxygen, 9, GTMaterials.Hydrogen, 4)
-                .color(0xbacdd1)
-                .buildAndRegister();
-
         Clay = new Material.Builder(
                 Main.id("clay"))
                 .ore()
