@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "gregheck:water_clathrate_gem"
+    },
+    {
+      "item": "gregheck:water_clathrate_gem"
+    },
+    {
+      "item": "gregheck:water_clathrate_gem"
+    }
+  ],
+  "result": {
+    "item": "minecraft:water_bucket"
+  }
+}

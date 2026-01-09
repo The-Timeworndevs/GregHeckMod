@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "gregheck:kaolinite_dust"
+    },
+    {
+      "item": "gregheck:kaolinite_dust"
+    },
+    {
+      "item": "gregheck:kaolinite_dust"
+    }
+  ],
+  "result": {
+    "item": "minecraft:clay_ball"
+  }
+}
