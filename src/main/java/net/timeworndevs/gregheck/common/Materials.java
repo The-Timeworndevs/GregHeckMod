@@ -1,52 +1,69 @@
 package net.timeworndevs.gregheck.common;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
+import com.gregtechceu.gtceu.common.data.GTMaterials;
 import net.timeworndevs.gregheck.Main;
 
 public class Materials {
 
     //Metals
-    public static Material UNOBTANIUM;
+    public static Material Unobtanium;
 
     //Clathrates
-    public static Material WATER_CLATHRATE;
-    public static Material ARGON_CLATHRATE;
+    public static Material WaterClathrate;
+    public static Material ArgonClathrate;
 
     //Other minerals
-    public static Material KAOLINITE;
+    public static Material Kaolinite;
+    public static Material Clay;
 
     public static void register() {
 
         //Metals
-        UNOBTANIUM = new Material.Builder(
+        Unobtanium = new Material.Builder(
                 Main.id("unobtanium"))
                 .ingot()
                 .ore()
-                .element(Elements.UNOBTAINIUM)
+                .element(Elements.Unobtanium)
                 .color(0xb439b4)
                 .buildAndRegister();
 
         //Clathrates
-        WATER_CLATHRATE = new Material.Builder(
+        WaterClathrate = new Material.Builder(
                 Main.id("water_clathrate"))
                 .gem()
                 .ore()
+                .formula("(SiO2)6H20")
+                .components(GTMaterials.Water, 1, GTMaterials.SiliconDioxide, 6)
                 .color(0xb5e8ff)
                 .buildAndRegister();
 
-        ARGON_CLATHRATE = new Material.Builder(
+        ArgonClathrate = new Material.Builder(
                 Main.id("argon_clathrate"))
                 .gem()
                 .ore()
+                .formula("(SiO2)6Ar")
+                .components(GTMaterials.Argon, 1, GTMaterials.SiliconDioxide, 6)
                 .color(0x8bc993)
                 .buildAndRegister();
 
         //Other minerals
-        KAOLINITE = new Material.Builder(
+        Kaolinite = new Material.Builder(
                 Main.id("kaolinite"))
                 .dust()
                 .ore()
+                .formula("Al2Si2O5(OH)4")
+                .components(GTMaterials.Aluminium, 2, GTMaterials.Silicon, 2, GTMaterials.Oxygen, 9, GTMaterials.Hydrogen, 4)
                 .color(0xbacdd1)
+                .buildAndRegister();
+
+        Clay = new Material.Builder(
+                Main.id("clay"))
+                .ore()
+                .dust()
+                .formula("Na2LiAl2Si(H2O)6")
+                .components(GTMaterials.Clay, 1)
+                .color(0xadc9de)
                 .buildAndRegister();
     }
 }
